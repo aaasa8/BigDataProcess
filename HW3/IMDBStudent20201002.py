@@ -5,7 +5,8 @@ file_input = sys.argv[1]
 file_output = sys.argv[2]
 
 f = open(file_input, "rt")
-for line in f:
+f_list = f.readlines()
+for line in f_list:
 	movie_list = line.split("::")
 	genre = movie_list[2]
 f.close()
